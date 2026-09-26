@@ -1,0 +1,50 @@
+### Create Todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "id": 1,
+  "todo": "할 일 하기"
+}
+
+### Get All
+GET http://localhost:3000/todos
+
+### Get All Cats
+GET http://localhost:3000/cats
+
+### Get One Cat
+GET http://localhost:3000/cats/1
+
+### Update Cat (partial)
+PUT http://localhost:3000/cats/1
+Content-Type: application/json
+
+{
+  "name": "나비-수정",
+  "pet": "산책하기",
+  "state": "키우는 중"
+}
+
+### Update Cat - Not Found
+PUT http://localhost:3000/cats/999
+Content-Type: application/json
+
+{
+  "name": "없음"
+}
+
+### Create Cat - Conflict
+POST http://localhost:3000/cats/create
+Content-Type: application/json
+
+{
+  "id": 99,
+  "name": "나나비",
+  "pet": "산책중",
+  "state": "키우는 중"
+}
+
+### Delete Cat
+Delete http://localhost:3000/cats/1
+Content-Type: application/json

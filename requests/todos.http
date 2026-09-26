@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:3000
+
+### Create Todo
+# NOTE: CreateTodoDto is still an empty stub — fill in real fields once defined
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+  "title": "test"
+}
+
+### Get All Todos
+GET {{baseUrl}}/todos
+
+### Get One Todo
+GET {{baseUrl}}/todos/1
+
+### Update Todo
+PATCH {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+  "title": "updated test"
+}
+
+### Delete Todo
+DELETE {{baseUrl}}/todos/1
